@@ -39,13 +39,5 @@ print("mqtt: published")
 client.disconnect()
 print("mqtt: disconnected")
 
-### can we go deepsleep ?
-#test_in  = machine.Pin(3, machine.Pin.IN, machine.Pin.PULL_UP)
-#test_out = machine.Pin(1, machine.Pin.OUT)
-#test_out.value(0)
-#disable_deepsleep = (test_in.value() == 0)
-#if disable_deepsleep:
-#    raise KeyboardInterrupt
-
-time.sleep(0.1)
+time.sleep(0.1) # without this, deepsleep doesn't work well
 esp.deepsleep(0)
