@@ -14,7 +14,7 @@ A pulse is generated on RESET whenever the door opens and the switch closes, res
 waking up the ESP. Once awaken, the ESP8266 connects to the Wifi, the MQTT server and then
 publish on a given topic before entering in Deep Sleep.
 
-See hardware details in [`hardware/`](https://github.com/barbudor/upy-door-sensor/tree/master/harware)
+See hardware details in [`hardware/`](https://github.com/barbudor/upy-door-sensor/tree/master/hardware)
 folder. Schematics avaible for both:
 - [Circuit-Diagram.org](https://www.circuit-diagram.org/editor/)
 - [Fritzing](http://fritzing.org/)
