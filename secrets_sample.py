@@ -11,8 +11,9 @@ MASK = "255.255.255.0"
 GW = "192.168.0.1"
 DNS = "1.1.1.1"
 # MQTT settings
-MQTTSVR = "192.168.0.200"
-MQTTUSER = "mqttuser"
-MQTTPWD = "mqttpasswd"
-MQTTTOPIC = "stat/door-01/door"
-MQTTVALUE = "open"
+MQTT_SVR = "192.168.0.200"
+MQTT_USER = "mqttuser"
+MQTT_PWD = "mqttpasswd"
+# Door status topic
+MQTT_TOPIC = "stat/door1/STATUS"
+MQTT_PAYLOAD = '{{"door":"open", "vcc":{:4.2f}}}'

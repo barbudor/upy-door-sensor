@@ -1,5 +1,5 @@
 # upy-door-sensor
-Dead simple MQTT door-sensor based on ESP8266 (ESP01) wiht MicroPython
+Dead simple MQTT door-sensor based on ESP8266 (ESP01) with MicroPython
 
 Using `umqttsimple.py` from [MicroPython-Lib](https://github.com/micropython/micropython-lib)
 package (author: Paul Sokolovsky, license: MIT License).<br>
@@ -20,9 +20,12 @@ folder. Schematics avaible for both:
 - [Fritzing](http://fritzing.org/)
 
 ![schematics should display here](https://raw.githubusercontent.com/barbudor/upy-door-sensor/master/hardware/circuit-diagram.org/upy-door-sensor.png "schematics")
-
 You must use a micro-switch which is open when the door is closed and closed when the door is open.
 A reed switch is not suitable.
+
+The MQTT message include a status for the door (always "open" as the sensor cannot detect
+closing the door) and the VCC voltage. As soon as it drops below the regulator voltage, it means
+that the battery is low and should be changed/charged.
 
 # Configuration
 No fancy web-server!
